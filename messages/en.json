@@ -1,10 +1,123 @@
 {
     "HomePage": {
-        "title": "Home",
-        "about": "About"
+        "title": "Accueil",
+        "about": "A propos"
     },
     "NotFound": {
-        "title": "Page not found",
-        "home": "Go to home"
+        "title": "Page non trouvée",
+        "home": "Retour à l'accueil"
+    },
+    "Home": {
+        "greeting": "Bonjour, je suis Paul Berthelot",
+        "title": "Développeur Web & Designer",
+        "description": "Bienvenue sur mon portfolio. Je suis un développeur passionné qui crée des applications web et des expériences numériques modernes.",
+        "aboutButton": "À propos de moi",
+        "projectsButton": "Voir mes projets",
+        "profileAlt": "Photo de profil de Paul Berthelot"
+    },
+    "About": {
+        "title": "À Propos",
+        "subtitle": "En savoir plus sur mon parcours et mes compétences",
+        "imageAlt": "Photo de Paul Berthelot",
+        "bioTitle": "Qui suis-je ?",
+        "bioPara1": "Je suis un développeur web fullstack avec une passion pour la création d'interfaces utilisateur élégantes et fonctionnelles.",
+        "bioPara2": "Avec plus de 5 ans d'expérience dans le développement web, j'ai travaillé sur divers projets allant des sites vitrines aux applications complexes.",
+        "bioPara3": "J'aime explorer de nouvelles technologies et je m'efforce constamment d'améliorer mes compétences pour offrir les meilleures solutions possibles.",
+        "skillsTitle": "Mes Compétences",
+        "experienceTitle": "Mon Parcours",
+        "experience1Title": "Développeur Frontend Senior",
+        "experience1Date": "2021 - Présent",
+        "experience1Description": "Développement d'applications React modernes avec une attention particulière aux performances et à l'accessibilité.",
+        "experience2Title": "Développeur Web Fullstack",
+        "experience2Date": "2018 - 2021",
+        "experience2Description": "Conception et développement d'applications web complètes, du backend au frontend, en utilisant Node.js, Express et React.",
+        "experience3Title": "Développeur Junior",
+        "experience3Date": "2016 - 2018",
+        "experience3Description": "Début de carrière dans le développement web, travaillant principalement avec HTML, CSS et JavaScript."
+    },
+    "Projects": {
+        "title": "Mes Projets",
+        "subtitle": "Découvrez une sélection de mes travaux récents",
+        "noProjects": "Aucun projet disponible pour le moment. Revenez bientôt !",
+        "seeProject": "Voir le projet",
+        "seeAllProjects": "Voir tous les projets",
+        "otherProjects": "Autres projets notables",
+        "portfolio": {
+            "title": "Portfolio Personnel",
+            "description": "Site web portfolio créé avec Next.js, TailwindCSS et Framer Motion pour présenter mes projets et compétences.",
+            "shortDescription": "Site web portfolio avec animations et design responsive"
+        },
+        "ecommerce": {
+            "title": "Plateforme E-commerce",
+            "description": "Plateforme complète avec panier, paiement et gestion des commandes.",
+            "shortDescription": "Plateforme complète avec panier et paiement"
+        },
+        "productivity": {
+            "title": "App de Productivité",
+            "description": "Application mobile pour gérer les tâches et améliorer la productivité.",
+            "shortDescription": "App mobile pour gérer les tâches"
+        }
+    },
+    "Education": {
+        "title": "Formation",
+        "master2": {
+            "degree": "Manager de Solutions Digitales et Data (Bac +5)",
+            "institution": "ENI - 3IL",
+            "years": "2024 - 2025",
+            "description": ""
+        },
+        "master1": {
+            "degree": "Concepteur Développeur d'Applications (Bac +4)",
+            "institution": "ENI",
+            "years": "2022 - 2024",
+            "description": ""
+        },
+        "bts": {
+            "degree": "BTS SIO option SLAM (Bac +2)",
+            "institution": "Lycée Maupertuis - Saint-Malo",
+            "years": "2021 - 2022",
+            "description": "Services informatiques aux organisations (SIO)"
+        },
+        "bac": {
+            "degree": "Baccalauréat SN option RISC",
+            "institution": "Lycée La Providence - Saint-Malo",
+            "years": "2016 - 2019",
+            "description": "Systèmes numériques (SN), Réseaux Informatiques et Systèmes Communicants (RISC)"
+        },
+        "certifications": {
+            "title": "Certifications",
+            "permis": "Permis B",
+            "toeic": "TOEIC 900"
+        }
+    },
+    "Awards": {
+        "title": "Récompenses & Distinctions",
+        "hackathon": {
+            "title": "Hackathon Innovation Award",
+            "year": "2022",
+            "description": "Premier prix pour un projet d'application de santé connectée."
+        },
+        "bestProject": {
+            "title": "Meilleur Projet Web",
+            "year": "2021",
+            "description": "Récompense universitaire pour un projet de plateforme d'apprentissage en ligne."
+        },
+        "publications": {
+            "title": "Publications",
+            "reactArticle": {
+                "title": "Article sur les meilleures pratiques React",
+                "year": "2022"
+            },
+            "nextjsTutorial": {
+                "title": "Tutoriel NextJS pour débutants",
+                "year": "2021"
+            }
+        }
+    },
+    "NavBar": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "contact": "Contact"
     }
 }

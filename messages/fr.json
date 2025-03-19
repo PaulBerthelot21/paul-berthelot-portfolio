@@ -1,10 +1,95 @@
 {
-    "HomePage": {
-        "title": "Accueil",
-        "about": "A propos"
+    "Home": {
+        "greeting": "Bonjour, je suis Paul Berthelot",
+        "title": "Développeur Web & Designer"
     },
-    "NotFound": {
-        "title": "Page non trouvée",
-        "home": "Retour à l'accueil"
+    "About": {
+        "title": "À Propos",
+        "readMore": "En savoir plus",
+        "description": "Je suis un développeur web fullstack avec une passion pour la création d'interfaces utilisateur élégantes et fonctionnelles.",
+        "bioTitle": "Qui suis-je ?",
+        "bioPara1": "Je suis un développeur web fullstack avec une passion pour la création d'interfaces utilisateur élégantes et fonctionnelles.",
+        "bioPara2": "Avec plus de 5 ans d'expérience dans le développement web, j'ai travaillé sur divers projets allant des sites vitrines aux applications complexes.",
+        "bioPara3": "J'aime explorer de nouvelles technologies et je m'efforce constamment d'améliorer mes compétences pour offrir les meilleures solutions possibles."
+    },
+    "Projects": {
+        "title": "Mes Projets",
+        "subtitle": "Découvrez une sélection de mes travaux récents",
+        "back": "Retour",
+        "noProjects": "Aucun projet disponible pour le moment. Revenez bientôt !",
+        "seeProject": "Voir le projet",
+        "seeAllProjects": "Voir tous les projets"
+    },
+    "Skills": {
+        "title": "Compétences",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Base de données",
+        "design": "Design",
+        "devops": "DevOps & Outils",
+        "other": "Autres"
+    },
+    "Education": {
+        "title": "Formations",
+        "master2": {
+            "degree": "Manager de Solutions Digitales et Data (Bac +5)",
+            "institution": "3IL Ingénieurs - Rennes",
+            "years": "2024 - 2025",
+            "description": ""
+        },
+        "master1": {
+            "degree": "Concepteur Développeur d'Applications (Bac +4)",
+            "institution": "ENI Ecole Informatique - Rennes",
+            "years": "2022 - 2024",
+            "description": ""
+        },
+        "bts": {
+            "degree": "BTS SIO option SLAM (Bac +2)",
+            "institution": "Lycée Maupertuis - Saint-Malo",
+            "years": "2021 - 2022",
+            "description": "Services informatiques aux organisations (SIO)"
+        },
+        "bac": {
+            "degree": "Baccalauréat SN option RISC",
+            "institution": "Lycée La Providence - Saint-Malo",
+            "years": "2016 - 2019",
+            "description": "Systèmes numériques (SN), Réseaux Informatiques et Systèmes Communicants (RISC)"
+        },
+        "certifications": {
+            "title": "Certifications",
+            "permis": "Permis B",
+            "toeic": "TOEIC 850"
+        }
+    },
+    "Experience": {
+        "title": "Expériences",
+        "cordon" : {
+            "job": "Concepteur d'applications web",
+            "location": "Cordon Group - Quévert",
+            "years": "2022 - Aujourd'hui",
+            "jobType": "Alternance",
+            "description": "Développement d'une application de gestion des patients"
+        },
+        "hospital" : {
+            "job": "Développeur web",
+            "location": "Centre Hospitalier de Saint-Malo",
+            "years": "2022",
+            "jobType": "Stage",
+            "description": "Développement d'une application de gestion des patients"
+        }
+    },
+    "Contact": {
+        "title": "Contact",
+        "email": "paulberthelotirl@gmail.com",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+    },
+    "Settings": {
+        "title": "Paramètres",
+        "language": "Langue",
+        "theme": "Thème",
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Système"
     }
 }
