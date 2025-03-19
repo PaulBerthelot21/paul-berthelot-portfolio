@@ -1,0 +1,10 @@
+{
+    "HomePage": {
+        "title": "Accueil",
+        "about": "A propos"
+    },
+    "NotFound": {
+        "title": "Page non trouvée",
+        "home": "Retour à l'accueil"
+    }
+}
