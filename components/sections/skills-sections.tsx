@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Code, Maximize2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { skills } from "@/lib/data/skills";
 
 type SkillsSectionProps = {
   onOpen: () => void;
-  itemVariants: any;
+  itemVariants: Variants;
 };
 
 export default function SkillsSection({ onOpen, itemVariants }: SkillsSectionProps) {

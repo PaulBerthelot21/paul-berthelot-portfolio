@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
-import { Palette, Globe } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { Palette } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
 import { useTranslations } from "next-intl";
 import { ConfettiToggle } from "../ui/confetti-toggle";
 import { LanguageToggle } from "../ui/language-toggle";
 
 type SettingsSectionProps = {
-  itemVariants: any;
+  itemVariants: Variants;
 };
 
 export default function SettingsSection({ itemVariants }: SettingsSectionProps) {

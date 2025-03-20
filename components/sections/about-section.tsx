@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Maximize2 } from "lucide-react";
 import { AnimationEmoji } from "../animations/animation-emoji";
 
 type AboutSectionProps = {
   onOpen: () => void;
-  itemVariants: any;
+  itemVariants: Variants;
 };
 
 export default function AboutSection({ onOpen, itemVariants }: AboutSectionProps) {

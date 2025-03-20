@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { Monitor, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -15,7 +15,7 @@ type ProjectData = {
 
 type ProjectsSectionProps = {
   onOpen: () => void;
-  itemVariants: any;
+  itemVariants: Variants;
 };
 
 export default function ProjectsSection({ onOpen, itemVariants }: ProjectsSectionProps) {
@@ -77,7 +77,7 @@ export default function ProjectsSection({ onOpen, itemVariants }: ProjectsSectio
             <div className="animate-pulse h-6 w-6 rounded-full bg-purple-300 dark:bg-purple-700"></div>
           </div>
         ) : displayProjects.length > 0 ? (
-          displayProjects.map((project: ProjectData, index: number) => (
+          displayProjects.map((project: ProjectData) => (
             <div key={project.slug} className="flex flex-col md:flex-row gap-4 items-center border-b pb-4 last:border-0 last:pb-0 dark:border-slate-700">
               <div className="relative w-full md:w-48 h-32 rounded-xl overflow-hidden shadow-md flex-shrink-0">
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.imageColor}`}></div>

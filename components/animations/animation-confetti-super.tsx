@@ -1,6 +1,5 @@
 "use client"
 
-import React from 'react';
 import confetti from 'canvas-confetti';
 
 interface ConfettiSuperProps {
@@ -90,16 +89,18 @@ const rain = (colors?: string[]) => {
 };
 
 export const launchConfettiSuper = ({ type = 'spiral', colors, duration = 5000 }: ConfettiSuperProps = {}) => {
-  switch (type) {
-    case 'spiral':
+  setTimeout(() => {
+    if (type === 'spiral') {
       spiral(colors);
-      break;
-    case 'rain':
+    } else {
       rain(colors);
-      break;
-    default:
-      spiral(colors);
-      break;
+    }
+  }, 0);
+  
+  if (duration > 0) {
+    setTimeout(() => {
+      confetti.reset();
+    }, duration);
   }
 };
 

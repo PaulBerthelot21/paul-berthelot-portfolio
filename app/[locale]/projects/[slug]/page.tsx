@@ -13,13 +13,12 @@ export async function generateStaticParams({ params }: { params: { locale: strin
   }));
 }
 
-export default async function ProjectPage({
-  params
-}: {
-  params: { slug: string, locale: string }
-}) {
-  // Utiliser Promise.resolve pour s'assurer que les paramètres sont attendus
-  const { slug, locale } = await Promise.resolve(params);
+// Définir le type des paramètres avec Promise selon les recommandations pour Next.js 15
+type ProjectPageParams = Promise<{ slug: string; locale: string }>;
+
+export default async function ProjectPage(props: { params: ProjectPageParams }) {
+  const params = await props.params;
+  const { slug, locale } = params;
   const project = await getProjectBySlug(slug, locale);
 
   if (!project) {

@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 type ContactSectionProps = {
-  itemVariants: any;
+  itemVariants: Variants;
 };
 
 export default function ContactSection({ itemVariants }: ContactSectionProps) {

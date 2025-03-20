@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { GraduationCap, Maximize2 } from "lucide-react";
 import { educationIds } from "@/lib/data/education";
 
 type EducationSectionProps = {
   onOpen: () => void;
-  itemVariants: any;
+  itemVariants: Variants;
 };
 
 export default function EducationSection({ onOpen, itemVariants }: EducationSectionProps) {

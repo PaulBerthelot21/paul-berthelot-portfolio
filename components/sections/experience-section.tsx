@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Briefcase, Maximize2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { experienceIds } from "@/lib/data/experiences";
 
 type ExperienceSectionProps = {
-  itemVariants: any;
+  itemVariants: Variants;
   onOpen: () => void;
 };
 
