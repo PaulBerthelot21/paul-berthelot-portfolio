@@ -1,26 +1,13 @@
-import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
 import { ProjectData } from "@/lib/projects-utils";
 
 interface ProjectDetailProps {
   project: ProjectData;
   contentHtml: string;
-  backLinkText: string;
 }
 
-export function ProjectDetail({ project, contentHtml, backLinkText }: ProjectDetailProps) {
+export function ProjectDetail({ project, contentHtml }: ProjectDetailProps) {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
-      <div className="mb-8">
-        <Link 
-          href="/projects" 
-          className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ChevronLeft className="w-4 h-4 mr-1" />
-          {backLinkText}
-        </Link>
-      </div>
-      
       <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
         <div className={`h-64 bg-gradient-to-br ${project.imageColor} flex items-center justify-center text-white`}>
           <h1 className="text-4xl md:text-5xl font-bold text-center">{project.title}</h1>

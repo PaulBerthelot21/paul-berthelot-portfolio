@@ -15,8 +15,10 @@
     "Projects": {
         "title": "My Projects",
         "subtitle": "Discover a selection of my recent work",
-        "back": "Back",
+        "home": "Home",
+        "projects": "Projects",
         "noProjects": "No projects available at the moment. Check back soon!",
+        "back": "Back",
         "seeProject": "View project",
         "seeAllProjects": "View all projects"
     },
