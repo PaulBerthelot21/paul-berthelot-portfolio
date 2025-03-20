@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const projects = getProjects();
+    const projects = await getProjects();
     return NextResponse.json({ projects }, { status: 200 });
   } catch (error) {
     console.error('Erreur lors de la récupération des projets:', error);

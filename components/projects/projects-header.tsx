@@ -37,7 +37,7 @@ export default function ProjectsHeader({ projectTitle }: ProjectsHeaderProps) {
   return (
     <div className="flex flex-row justify-between items-center py-4 border-b mb-6 gap-4">
       <div className="flex items-center gap-2">
-        <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => router.push("/")}>
+        <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => router.back()}>
           <ArrowLeft className="w-4 h-4" />
         </Button>
 
