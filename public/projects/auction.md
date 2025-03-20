@@ -1,7 +1,7 @@
 ---
 title: "Projet Enchères de Seconde Main"
 description: "Application d'enchères favorisant la réutilisation d'objets sans échanges financiers, prolongeant ainsi la durée de vie des produits."
-technologies: ["project management", "java", "team", "durability"]
+technologies: ["Management de projet", "Java", "Equipe"]
 ---
 
 ## Projet Enchères de Seconde Main

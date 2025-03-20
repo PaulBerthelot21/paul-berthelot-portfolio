@@ -20,7 +20,8 @@
         "back": "Retour",
         "noProjects": "Aucun projet disponible pour le moment. Revenez bientôt !",
         "seeProject": "Voir le projet",
-        "seeAllProjects": "Voir tous les projets"
+        "seeAllProjects": "Voir tous les projets",
+        "filterByTechnology": "Filtrer par technologie"
     },
     "Skills": {
         "title": "Compétences",

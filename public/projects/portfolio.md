@@ -1,7 +1,7 @@
 ---
 title: Portfolio Personnel
 description: Un portfolio moderne développé avec Next.js, TypeScript et Tailwind CSS
-technologies: ["Next.js", "TypeScript", "Tailwind CSS"]
+technologies: ["NextJS", "TypeScript", "TailwindCSS", "Next-intl", "Framer Motion"]
 imageColor: from-blue-400 to-purple-500
 ---
 

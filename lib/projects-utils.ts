@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import matter from 'gray-matter';
 
 export interface ProjectData {
@@ -11,7 +11,7 @@ export interface ProjectData {
   content: string;
 }
 
-export function getProjects(): ProjectData[] {
+export async function getProjects(): Promise<ProjectData[]> {
   try {
     const projectsDirectory = path.join(process.cwd(), 'public/projects');
     const fileNames = fs.readdirSync(projectsDirectory);
@@ -42,7 +42,7 @@ export function getProjects(): ProjectData[] {
   }
 }
 
-export function getProjectBySlug(slug: string): ProjectData | null {
+export async function getProjectBySlug(slug: string): Promise<ProjectData | null> {
   try {
     const projectsDirectory = path.join(process.cwd(), 'public/projects');
     const fullPath = path.join(projectsDirectory, `${slug}.md`);

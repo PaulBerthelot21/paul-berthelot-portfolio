@@ -1,7 +1,8 @@
 ---
 title: "Projet Présentation de Marque"
 description: "Création d'un site web dynamique et responsive pour la présentation d'une marque lors d'une exposition publique."
-technologies: ["html", "css", "javascript", "frontend", "public"]
+technologies: ["HTML", "CSS", "JavaScript", "Public", "Branding"]
+imageColor: from-blue-400 to-purple-500
 ---
 
 ## Projet Présentation de Marque

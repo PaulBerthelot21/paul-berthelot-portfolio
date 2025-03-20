@@ -1,7 +1,8 @@
 ---
 title: "Projet Bibliothèque"
 description: "Développement d'une application de gestion de prêts de livres pour une bibliothèque, intégrant Java et PHP."
-technologies: ["java", "mysql", "php", "backend"]
+technologies: ["Java", "MySQL", "PHP", "Backend"]
+imageColor: from-blue-400 to-purple-500
 ---
 
 ## Projet Bibliothèque

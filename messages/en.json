@@ -20,7 +20,8 @@
         "noProjects": "No projects available at the moment. Check back soon!",
         "back": "Back",
         "seeProject": "View project",
-        "seeAllProjects": "View all projects"
+        "seeAllProjects": "View all projects",
+        "filterByTechnology": "Filter by technology"
     },
     "Skills": {
         "title": "Skills",
