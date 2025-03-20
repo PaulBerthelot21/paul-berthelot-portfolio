@@ -95,5 +95,13 @@
         "dark": "Sombre",
         "system": "Système",
         "confetti": "Surprise ?"
+    },
+    "Language": {
+        "toggle": "Changer de langue",
+        "fr": "Français",
+        "en": "Anglais"
+    },
+    "Phrases": {
+        "title": "Full Stack Developer"
     }
 }

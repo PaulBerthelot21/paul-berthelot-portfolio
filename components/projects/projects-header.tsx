@@ -6,7 +6,6 @@ import { ArrowLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { ModeToggle } from "../ui/mode-toggle";
-import { LangSwitcher } from "../ui/lang-switcher";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,6 +14,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { LanguageToggle } from "../ui/language-toggle";
 
 interface ProjectsHeaderProps {
   projectTitle?: string;
@@ -35,7 +35,7 @@ export default function ProjectsHeader({ projectTitle }: ProjectsHeaderProps) {
   const displayTitle = projectTitle || (isProjectPage ? pathSegments[2].replace(/-/g, ' ') : '');
 
   return (
-    <div className="flex flex-row justify-between items-center py-4 border-b mb-6 gap-4">
+    <div className="sticky top-0 z-10 bg-background flex flex-row justify-between items-center py-4 border-b mb-6 gap-4">
       <div className="flex items-center gap-2">
         <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => router.back()}>
           <ArrowLeft className="w-4 h-4" />
@@ -75,7 +75,7 @@ export default function ProjectsHeader({ projectTitle }: ProjectsHeaderProps) {
       </div>
 
       <div className="flex items-center gap-2 ml-auto sm:ml-0">
-        <LangSwitcher />
+        <LanguageToggle />
         <ModeToggle />
       </div>
     </div>

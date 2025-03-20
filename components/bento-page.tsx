@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { AnimatedText } from "./animations/AnimatedText";
+import { AnimatedText } from "./animations/animated-text";
 import { ModalType } from "./sections/modal-content";
 import Modal from "./sections/modal";
 import AboutSection from "./sections/about-section";

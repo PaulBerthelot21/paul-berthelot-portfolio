@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Maximize2 } from "lucide-react";
-import { AnimationEmoji } from "../animations/AnimationEmoji";
+import { AnimationEmoji } from "../animations/animation-emoji";
 
 type AboutSectionProps = {
   onOpen: () => void;
