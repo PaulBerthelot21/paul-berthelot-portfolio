@@ -125,12 +125,21 @@ export default function ModalContent({ modalOpen }: ModalContentProps) {
           <h2 className="text-2xl font-bold mb-4">{tExperience("title")}</h2>
           <div className="space-y-6">
             {experienceIds.map((expId) => (
-              <div key={expId}>
-                <h3 className="text-xl font-semibold">{tExperience(`${expId}.job`)}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-1">{tExperience(`${expId}.location`)}</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-1">{tExperience(`${expId}.years`)}</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-1">{tExperience(`${expId}.jobType`)}</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-1">{tExperience(`${expId}.description`)}</p>
+              <div key={expId} className="border-l-2 border-purple-500 pl-4 pb-4">
+                <div className="flex justify-between items-start mb-1">
+                  <h3 className="text-xl font-semibold">{tExperience(`${expId}.job`)}</h3>
+                  <span className="text-sm bg-purple-100 dark:bg-purple-900/30 px-2 py-0.5 rounded">
+                    {tExperience(`${expId}.years`)}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <p className="text-gray-600 dark:text-gray-300">{tExperience(`${expId}.location`)}</p>
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+                  <span className="bg-indigo-100 dark:bg-indigo-900/30 text-xs px-2 py-0.5 rounded-full">
+                    {tExperience(`${expId}.jobType`)}
+                  </span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mt-2">{tExperience(`${expId}.description`)}</p>
               </div>
             ))}
           </div>

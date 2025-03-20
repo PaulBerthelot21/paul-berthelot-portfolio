@@ -12,9 +12,17 @@ export interface ProjectData {
   order?: number; // Champ optionnel pour définir l'ordre d'affichage
 }
 
-export async function getProjects(): Promise<ProjectData[]> {
+export async function getProjects(locale: string = 'fr'): Promise<ProjectData[]> {
   try {
-    const projectsDirectory = path.join(process.cwd(), 'public/projects');
+    // Vérifier d'abord si le dossier spécifique à la langue existe
+    const localizedDirectory = path.join(process.cwd(), `public/projects/${locale}`);
+    const defaultDirectory = path.join(process.cwd(), 'public/projects');
+    
+    // Utiliser le dossier localisé s'il existe, sinon utiliser le dossier par défaut
+    const projectsDirectory = fs.existsSync(localizedDirectory) 
+      ? localizedDirectory 
+      : defaultDirectory;
+    
     const fileNames = fs.readdirSync(projectsDirectory);
     
     const projects = fileNames
@@ -57,13 +65,21 @@ export async function getProjects(): Promise<ProjectData[]> {
   }
 }
 
-export async function getProjectBySlug(slug: string): Promise<ProjectData | null> {
+export async function getProjectBySlug(slug: string, locale: string = 'fr'): Promise<ProjectData | null> {
   try {
-    const projectsDirectory = path.join(process.cwd(), 'public/projects');
-    const fullPath = path.join(projectsDirectory, `${slug}.md`);
+    // Vérifier d'abord si le fichier existe dans le dossier spécifique à la langue
+    const localizedDirectory = path.join(process.cwd(), `public/projects/${locale}`);
+    const defaultDirectory = path.join(process.cwd(), 'public/projects');
     
+    let fullPath = path.join(localizedDirectory, `${slug}.md`);
+    
+    // Si le fichier n'existe pas dans le dossier localisé, essayer le dossier par défaut
     if (!fs.existsSync(fullPath)) {
-      return null;
+      fullPath = path.join(defaultDirectory, `${slug}.md`);
+      
+      if (!fs.existsSync(fullPath)) {
+        return null;
+      }
     }
     
     const fileContents = fs.readFileSync(fullPath, 'utf8');

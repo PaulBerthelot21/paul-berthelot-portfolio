@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Monitor, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -22,11 +22,24 @@ export default function ProjectsSection({ onOpen, itemVariants }: ProjectsSectio
   const tProjects = useTranslations("Projects");
   const [projects, setProjects] = useState<ProjectData[]>([]);
   const [loading, setLoading] = useState(true);
+  const locale = useLocale();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Détection de la taille d'écran
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+    
+    handleResize(); // Vérification initiale
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     async function fetchProjects() {
       try {
-        const response = await fetch('/api/projects');
+        const response = await fetch(`/api/projects?locale=${locale}`);
         const data = await response.json();
         setProjects(data.projects);
       } catch (error) {
@@ -37,10 +50,11 @@ export default function ProjectsSection({ onOpen, itemVariants }: ProjectsSectio
     }
     
     fetchProjects();
-  }, []);
+  }, [locale]);
 
-  const displayProjects = projects.slice(0, 3);
-  const hasMoreProjects = projects.length > 3;
+  // Limiter à 1 projet sur mobile, 3 sur desktop
+  const displayProjects = projects.slice(0, isMobile ? 2 : 3);
+  const hasMoreProjects = projects.length > (isMobile ? 2 : 3);
 
   return (
     <motion.div 

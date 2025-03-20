@@ -19,7 +19,7 @@ export default function SettingsSection({ itemVariants }: SettingsSectionProps) 
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
     >
-      <h3 className="text-xl font-bold mb-4 flex items-center justify-center">
+      <h3 className="text-xl font-bold mb-4 flex items-center justify-start">
         <Palette className="mr-2 h-5 w-5" /> {t("title")}
       </h3>
       <div className="flex flex-col items-center gap-5">

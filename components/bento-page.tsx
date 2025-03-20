@@ -73,7 +73,7 @@ export default function BentoPage() {
         </div>
 
         {/* Grille Bento */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-[auto,auto,auto] gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -92,7 +92,7 @@ export default function BentoPage() {
           <ProjectsSection onOpen={() => router.push("/projects")} itemVariants={itemVariants} />
 
           {/* Expérience */}
-          <ExperienceSection itemVariants={itemVariants} />
+          <ExperienceSection onOpen={() => openModal("experience")} itemVariants={itemVariants} />
 
           {/* Contact */}
           <ContactSection itemVariants={itemVariants} />

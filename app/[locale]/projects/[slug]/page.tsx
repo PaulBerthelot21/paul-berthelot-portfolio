@@ -5,8 +5,9 @@ import { remark } from 'remark';
 import { ProjectDetail } from "@/components/projects/projects-slug-page";
 
 // Permet de générer les pages statiques pour tous les projets
-export async function generateStaticParams() {
-  const projects = await getProjects();
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+  const { locale } = params;
+  const projects = await getProjects(locale);
   return projects.map((project) => ({
     slug: project.slug,
   }));
@@ -18,8 +19,8 @@ export default async function ProjectPage({
   params: { slug: string, locale: string }
 }) {
   // Utiliser Promise.resolve pour s'assurer que les paramètres sont attendus
-  const { slug } = await Promise.resolve(params);
-  const project = await getProjectBySlug(slug);
+  const { slug, locale } = await Promise.resolve(params);
+  const project = await getProjectBySlug(slug, locale);
 
   if (!project) {
     notFound();

@@ -26,7 +26,7 @@ export default function SkillsSection({ onOpen, itemVariants }: SkillsSectionPro
         <Code className="mr-2 h-5 w-5" /> {tSkills("title")}
       </h3>
       <div className="flex flex-wrap gap-2">
-        {skills.slice(0, 6).map((skill) => (
+        {skills.slice(0, 10).map((skill) => (
           <span 
             key={skill.id} 
             className="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm"
@@ -35,7 +35,7 @@ export default function SkillsSection({ onOpen, itemVariants }: SkillsSectionPro
           </span>
         ))}
         <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-          +{skills.length - 6} plus
+          +{skills.length - 10} plus
         </span>
       </div>
     </motion.div>
