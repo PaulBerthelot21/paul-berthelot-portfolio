@@ -1,11 +1,16 @@
 import { ProjectData } from "@/lib/projects-utils";
 
+// Composant principal - rendu côté serveur
 interface ProjectDetailProps {
   project: ProjectData;
   contentHtml: string;
 }
 
 export function ProjectDetail({ project, contentHtml }: ProjectDetailProps) {
+  if (!project || !contentHtml) {
+    return <ProjectErrorFallback />;
+  }
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
       <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
@@ -33,6 +38,19 @@ export function ProjectDetail({ project, contentHtml }: ProjectDetailProps) {
           />
         </div>
       </div>
+    </div>
+  );
+}
+
+// Composant d'erreur séparé - rendu côté serveur
+function ProjectErrorFallback() {
+  return (
+    <div className="container mx-auto px-4 py-12 max-w-4xl text-center">
+      <h1 className="text-2xl font-bold mb-4">Erreur</h1>
+      <p className="mb-6">Une erreur s'est produite lors du chargement du projet.</p>
+      <a href="/projects" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        Retour aux projets
+      </a>
     </div>
   );
 }
