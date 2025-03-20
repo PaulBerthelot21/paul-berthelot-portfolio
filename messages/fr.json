@@ -93,6 +93,7 @@
         "theme": "Thème",
         "light": "Clair",
         "dark": "Sombre",
-        "system": "Système"
+        "system": "Système",
+        "confetti": "Surprise ?"
     }
 }

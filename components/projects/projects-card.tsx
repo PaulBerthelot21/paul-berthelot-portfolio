@@ -10,12 +10,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Link href={`/projects/${project.slug}`} className="block">
       <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl">
         <div className={`relative h-48 bg-gradient-to-br ${project.imageColor}`}>
-          <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl">
-            {project.title}
+          <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl text-center px-4">
+            <span className="line-clamp-2 overflow-ellipsis">{project.title}</span>
           </div>
         </div>
         <div className="p-6">
-          <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+          <h2 className="text-xl font-bold mb-2 truncate">{project.title}</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {project.technologies.map((tech) => (

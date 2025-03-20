@@ -3,6 +3,7 @@ title: "Projet Market"
 description: "Développement d'un site e-commerce interne pour la revente de produits entre services d'une entreprise."
 technologies: ["Sylius", "Symfony", "Twig", "PostgreSQL", "Backend", "Frontend"]
 imageColor: from-blue-400 to-purple-500
+order: 3
 ---
 
 ## Projet Market

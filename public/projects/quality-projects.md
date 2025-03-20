@@ -3,6 +3,7 @@ title: "Projet Application Web Qualité et Projets"
 description: "Développement d'une application web de gestion de la qualité et des projets pour une entreprise."
 technologies: ["Angular", "Symfony", "PHP", "PostgreSQL", "Frontend", "Backend", "Multi-langue", "API Platform", "Docker", "Nginx"]
 imageColor: from-blue-400 to-purple-500
+order: 2
 ---
 
 ## Projet QualiWeb

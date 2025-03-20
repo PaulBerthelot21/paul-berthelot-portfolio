@@ -9,6 +9,7 @@ export interface ProjectData {
   technologies: string[];
   imageColor: string;
   content: string;
+  order?: number; // Champ optionnel pour définir l'ordre d'affichage
 }
 
 export async function getProjects(): Promise<ProjectData[]> {
@@ -31,11 +32,25 @@ export async function getProjects(): Promise<ProjectData[]> {
           description: data.description || '',
           technologies: data.technologies || [],
           imageColor: data.imageColor || 'from-blue-400 to-purple-500',
-          content
+          content,
+          order: data.order !== undefined ? Number(data.order) : undefined,
         };
       });
     
-    return projects;
+    // Trier les projets: d'abord par ordre (si défini), puis les autres
+    return projects.sort((a, b) => {
+      // Si les deux projets ont un ordre défini, les trier par ordre numérique
+      if (a.order !== undefined && b.order !== undefined) {
+        return a.order - b.order;
+      }
+      
+      // Projets avec ordre défini apparaissent en premier
+      if (a.order !== undefined) return -1;
+      if (b.order !== undefined) return 1;
+      
+      // Pour les autres projets sans ordre défini, conserver l'ordre d'origine
+      return 0;
+    });
   } catch (error) {
     console.error('Erreur lors du chargement des projets:', error);
     return [];
@@ -60,7 +75,8 @@ export async function getProjectBySlug(slug: string): Promise<ProjectData | null
       description: data.description || '',
       technologies: data.technologies || [],
       imageColor: data.imageColor || 'from-blue-400 to-purple-500',
-      content
+      content,
+      order: data.order !== undefined ? Number(data.order) : undefined,
     };
   } catch (error) {
     console.error(`Erreur lors du chargement du projet ${slug}:`, error);

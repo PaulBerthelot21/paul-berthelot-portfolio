@@ -67,13 +67,13 @@ export default function ProjectsSection({ onOpen, itemVariants }: ProjectsSectio
             <div key={project.slug} className="flex flex-col md:flex-row gap-4 items-center border-b pb-4 last:border-0 last:pb-0 dark:border-slate-700">
               <div className="relative w-full md:w-48 h-32 rounded-xl overflow-hidden shadow-md flex-shrink-0">
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.imageColor}`}></div>
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl">
-                  {project.title}
+                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl text-center px-2">
+                  <span className="line-clamp-2 overflow-ellipsis text-center w-full">{project.title}</span>
                 </div>
               </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-1">{project.title}</h4>
-                <p className="text-gray-700 dark:text-gray-300 mb-2 text-sm">
+              <div className="w-full overflow-hidden">
+                <h4 className="text-lg font-semibold mb-1 text-ellipsis overflow-hidden whitespace-nowrap">{project.title}</h4>
+                <p className="text-gray-700 dark:text-gray-300 mb-2 text-sm line-clamp-2 overflow-hidden">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1 mb-2">
@@ -95,11 +95,13 @@ export default function ProjectsSection({ onOpen, itemVariants }: ProjectsSectio
           <div className="flex flex-col md:flex-row gap-4 items-center mb-4">
             <div className="relative w-full md:w-48 h-32 rounded-xl overflow-hidden shadow-md flex-shrink-0">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 opacity-80"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl">Portfolio</div>
+              <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl text-center px-2">
+                <span className="line-clamp-2 overflow-ellipsis text-center w-full">Portfolio</span>
+              </div>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-1">{tProjects("portfolio.title")}</h4>
-              <p className="text-gray-700 dark:text-gray-300 mb-2 text-sm">
+            <div className="w-full overflow-hidden">
+              <h4 className="text-lg font-semibold mb-1 text-ellipsis overflow-hidden whitespace-nowrap">{tProjects("portfolio.title")}</h4>
+              <p className="text-gray-700 dark:text-gray-300 mb-2 text-sm line-clamp-2 overflow-hidden">
                 {tProjects("portfolio.description")}
               </p>
             </div>
