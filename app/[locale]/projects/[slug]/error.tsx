@@ -20,7 +20,7 @@ export default function ProjectError({
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl text-center">
-      <h2 className="text-2xl font-bold mb-4">Une erreur s'est produite</h2>
+      <h2 className="text-2xl font-bold mb-4">Une erreur s&apos;est produite</h2>
       <p className="mb-8 text-gray-600 dark:text-gray-400">
         {error.message || "Impossible de charger les détails du projet"}
       </p>
