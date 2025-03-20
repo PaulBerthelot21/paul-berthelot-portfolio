@@ -14,6 +14,8 @@
     },
     "Projects": {
         "title": "Mes Projets",
+        "home": "Accueil",
+        "projects": "Projets",
         "subtitle": "Découvrez une sélection de mes travaux récents",
         "back": "Retour",
         "noProjects": "Aucun projet disponible pour le moment. Revenez bientôt !",

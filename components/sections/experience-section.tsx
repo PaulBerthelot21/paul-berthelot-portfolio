@@ -21,7 +21,7 @@ export default function ExperienceSection({ itemVariants }: ExperienceSectionPro
       </h3>
       <div className="space-y-3">
         {experienceIds.map((expId) => (
-          <div className="bg-white dark:bg-slate-800 p-3 rounded-lg shadow-sm">
+          <div key={expId} className="bg-white dark:bg-slate-800 p-3 rounded-lg shadow-sm">
             <div className="flex justify-between items-start">
               <p className="font-medium">{tExperience(`${expId}.job`)}</p>
               <p className="text-sm text-gray-600 dark:text-gray-400">{tExperience(`${expId}.years`)}</p>
