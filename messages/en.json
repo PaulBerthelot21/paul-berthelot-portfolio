@@ -103,5 +103,13 @@
     },
     "Phrases": {
         "title": "Full Stack Developer"
+    },
+    "ProjectError": {
+        "title": "Project Error",
+        "message": "An error occurred while loading the project. Please try again later.",
+        "defaultMessage": "An error occurred while loading the project.",
+        "tryAgain": "Try Again",
+        "suggestion": "This project might be available in another language.",
+        "goBackToProjects": "Back to Projects"
     }
 }

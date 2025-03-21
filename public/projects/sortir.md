@@ -1,7 +1,7 @@
 ---
 title: "Projet Sortir"
 description: "Développement d'un site web en Symfony pour la gestion d'activités entre étudiants et anciens étudiants de l'ENI."
-technologies: ["Symfony", "PHP", "Twig", "Backend", "PostgreSQL"]
+technologies: ["Symfony", "PostgreSQL"]
 imageColor: from-green-400 to-emerald-500
 ---
 

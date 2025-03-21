@@ -1,7 +1,7 @@
 ---
 title: "Projet Présentation de Marque"
 description: "Création d'un site web dynamique et responsive pour la présentation d'une marque lors d'une exposition publique."
-technologies: ["HTML", "CSS", "JavaScript", "Public", "Branding"]
+technologies: ["JavaScript", "HTML", "CSS"]
 imageColor: from-blue-400 to-purple-500
 ---
 
@@ -16,9 +16,9 @@ Le site devait servir à promouvoir la marque et ses services, en attirant l’a
 Le projet comportait plusieurs contraintes techniques clés :
 
 - **Accessibilité** : Le site devait être accessible à un public diversifié et optimisé pour des utilisateurs non techniques, avec une navigation simple et intuitive.
-- **Compatibilité Tactile** : Conçu pour une utilisation fluide sur écrans tactiles, le site devait répondre de manière précise et rapide aux interactions des utilisateurs.
-- **Responsivité** : Le design devait s’adapter automatiquement aux différentes tailles d’écran, qu’il s’agisse de tablettes, d’ordinateurs ou de grands écrans d’exposition.
-- **Dynamisme** : Utilisation de JavaScript pour créer des animations et des transitions afin de rendre l’expérience de navigation plus vivante et captivante.
+- **Compatibilité tactile** : Conçu pour une utilisation fluide sur écrans tactiles, le site devait répondre de manière précise et rapide aux interactions des utilisateurs.
+- **Responsivité** : Le design devait s'adapter automatiquement aux différentes tailles d'écran, qu'il s'agisse de tablettes, d'ordinateurs ou de grands écrans d'exposition.
+- **Dynamisme** : Utilisation de JavaScript pour créer des animations et des transitions afin de rendre l'expérience de navigation plus vivante et captivante.
 
 ### Résultats et Apports
 

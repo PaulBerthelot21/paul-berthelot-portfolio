@@ -1,7 +1,7 @@
 ---
 title: "Projet Market"
 description: "Développement d'un site e-commerce interne pour la revente de produits entre services d'une entreprise."
-technologies: ["Sylius", "Symfony", "Twig", "PostgreSQL", "Backend", "Frontend"]
+technologies: ["Sylius", "Symfony", "PostgreSQL"]
 imageColor: from-blue-400 to-purple-500
 order: 3
 ---
@@ -27,6 +27,7 @@ J'ai travaillé à l'amélioration de certains blocs de fonctionnalités existan
 ### Sécurité et Accessibilité
 
 Étant un site interne, **Market** est sécurisé par :
+
 - Un système de **connexion SSO** (Single Sign-On), garantissant une authentification rapide et sécurisée des utilisateurs.
 - Un **pare-feu** interne pour restreindre l’accès aux employés autorisés uniquement.
 

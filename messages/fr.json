@@ -1,7 +1,7 @@
 {
     "Home": {
         "greeting": "Bonjour, je suis Paul Berthelot",
-        "title": "Développeur Web & Designer"
+        "title": "Concepteur Développeur Applications"
     },
     "About": {
         "title": "À Propos",
@@ -103,5 +103,13 @@
     },
     "Phrases": {
         "title": "Full Stack Developer"
+    },
+    "ProjectError": {
+        "title": "Erreur de chargement du projet",
+        "message": "Une erreur s'est produite lors du chargement du projet. Veuillez vérifier votre connexion Internet ou réessayer plus tard.",
+        "defaultMessage": "Une erreur s'est produite lors du chargement du projet.",
+        "tryAgain": "Réessayer",
+        "suggestions": "Ce projet est peut être disponible dans une autre langue.",
+        "backToProjects": "Retour aux projets"
     }
 }

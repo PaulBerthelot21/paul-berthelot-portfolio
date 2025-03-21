@@ -1,7 +1,7 @@
 ---
 title: "Projet WebTools"
 description: "Projet de développement web au sein d'un groupement hospitalier."
-technologies: ["HTML", "CSS", "JavaScript", "Frontend", "Oracle"]
+technologies: ["JavaScript", "Shell", "Oracle"]
 imageColor: from-green-400 to-emerald-500
 ---
 
