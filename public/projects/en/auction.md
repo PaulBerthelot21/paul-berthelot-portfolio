@@ -1,7 +1,8 @@
 ---
 title: "Second-Hand Auction Project"
 description: "Auction application promoting the reuse of objects without financial exchanges, thus extending the lifespan of products."
-technologies: ["Project Management", "Java", "Team"]
+technologies: ["Java EE", "MySQL"]
+imageColor: from-blue-400 to-purple-500
 ---
 
 ## Second-Hand Auction Project

@@ -1,7 +1,7 @@
 ---
 title: "Quality and Projects Web Application Project"
 description: "Development of a web application for quality and project management for a company."
-technologies: ["Angular", "Symfony", "PHP", "PostgreSQL", "Frontend", "Backend", "Multi-language", "API Platform", "Docker", "Nginx"]
+technologies: ["Angular", "Symfony", "PostgreSQL"]
 imageColor: from-blue-400 to-purple-500
 order: 2
 ---

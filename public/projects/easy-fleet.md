@@ -41,7 +41,3 @@ L'application Easy Fleet a été développée pour répondre aux besoins de gest
 - **Hébergement** : Microsfot Azure pour l'hébergement de l'application et la gestion des ressources
 - **Sécurité** : Auth.js pour la gestion de l'authentification et des autorisations
 - **Documentation** : Swagger pour la documentation de l'API
-
-## Visuel
-
-![Démonstration de l'application Easy Fleet](../projects-image/easy-fleet-home.png)

@@ -1,7 +1,7 @@
 ---
 title: "Sortir Project"
 description: "Development of a Symfony website for managing activities between ENI students and alumni."
-technologies: ["Symfony", "PHP", "Twig", "Backend", "PostgreSQL"]
+technologies: ["Symfony", "PostgreSQL"]
 imageColor: from-green-400 to-emerald-500
 ---
 

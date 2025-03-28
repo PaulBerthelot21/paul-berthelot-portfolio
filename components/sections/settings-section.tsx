@@ -2,7 +2,6 @@ import { motion, Variants } from "framer-motion";
 import { Palette } from "lucide-react";
 import { ModeToggle } from "../ui/mode-toggle";
 import { useTranslations } from "next-intl";
-import { ConfettiToggle } from "../ui/confetti-toggle";
 import { LanguageToggle } from "../ui/language-toggle";
 
 type SettingsSectionProps = {
@@ -30,10 +29,6 @@ export default function SettingsSection({ itemVariants }: SettingsSectionProps) 
         <div className="flex items-center justify-between w-full">
           <h4 className="text-lg font-semibold">{t("language")}</h4>
           <LanguageToggle />
-        </div>
-        <div className="flex items-center justify-between w-full">
-          <h4 className="text-lg font-semibold">{t("confetti")}</h4>
-          <ConfettiToggle />
         </div>
       </div>
     </motion.div>

@@ -1,7 +1,7 @@
 ---
 title: "Market Project"
 description: "Development of an internal e-commerce site for the resale of products between departments of a company."
-technologies: ["Sylius", "Symfony", "Twig", "PostgreSQL", "Backend", "Frontend"]
+technologies: ["Sylius", "Symfony", "PostgreSQL"]
 imageColor: from-blue-400 to-purple-500
 order: 3
 ---

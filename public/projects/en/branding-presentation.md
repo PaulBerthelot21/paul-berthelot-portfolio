@@ -1,7 +1,7 @@
 ---
 title: "Brand Presentation Project"
 description: "Creation of a dynamic and responsive website for a brand presentation at a public exhibition."
-technologies: ["HTML", "CSS", "JavaScript", "Public", "Branding"]
+technologies: ["JavaScript", "HTML", "CSS"]
 imageColor: from-blue-400 to-purple-500
 ---
 

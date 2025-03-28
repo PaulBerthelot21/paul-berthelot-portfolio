@@ -1,7 +1,7 @@
 ---
 title: "WebTools Project"
 description: "Web development project within a hospital group."
-technologies: ["HTML", "CSS", "JavaScript", "Frontend", "Oracle"]
+technologies: ["JavaScript", "Shell", "Oracle"]
 imageColor: from-green-400 to-emerald-500
 ---
 

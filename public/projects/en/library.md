@@ -1,7 +1,7 @@
 ---
 title: "Library Project"
 description: "Development of a book loan management application for a library, integrating Java and PHP."
-technologies: ["Java", "MySQL", "PHP", "Backend"]
+technologies: ["Java", "PHP", "MySQL"]
 imageColor: from-blue-400 to-purple-500
 ---
 
