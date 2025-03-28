@@ -71,14 +71,14 @@
             "location": "Cordon Group - Quévert",
             "years": "2022 - Aujourd'hui",
             "jobType": "Alternance",
-            "description": "Développement d'une application de gestion des patients"
+            "description": "Développement d'application de suivi qualité ISO et gestion de projets"
         },
         "hospital" : {
             "job": "Développeur web",
             "location": "Centre Hospitalier de Saint-Malo",
             "years": "2022",
             "jobType": "Stage",
-            "description": "Développement d'une application de gestion des patients"
+            "description": "Refonte complète de l'UI des applications internes du CHSM"
         }
     },
     "Contact": {

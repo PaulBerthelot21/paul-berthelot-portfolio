@@ -71,14 +71,14 @@
             "location": "Cordon Group - Quévert",
             "years": "2022 - Present",
             "jobType": "Apprenticeship",
-            "description": "Development of a patient management application"
+            "description": "Development of ISO quality monitoring applications and project management"
         },
         "hospital": {
             "job": "Web Developer",
             "location": "Saint-Malo Hospital Center",
             "years": "2022",
             "jobType": "Internship",
-            "description": "Development of a patient management application"
+            "description": "Complete UI redesign of CHSM internal applications"
         }
     },
     "Contact": {
