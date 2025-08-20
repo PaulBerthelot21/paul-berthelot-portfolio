@@ -14,7 +14,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { LanguageToggle } from "../ui/language-toggle";
 
 interface ProjectsHeaderProps {
   projectTitle?: string;
@@ -75,7 +74,6 @@ export default function ProjectsHeader({ projectTitle }: ProjectsHeaderProps) {
       </div>
 
       <div className="flex items-center gap-2 ml-auto sm:ml-0">
-        <LanguageToggle />
         <ModeToggle />
       </div>
     </div>
