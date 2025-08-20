@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useEffect } from "react";
 import ModalContent, { ModalType } from "./modal-content";
 
 type ModalProps = {
@@ -14,6 +15,25 @@ export default function Modal({ modalOpen, closeModal }: ModalProps) {
   const tSkills = useTranslations("Skills");
   const tAbout = useTranslations("About");
 
+  // Gestion de la touche Échap pour fermer la modale
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && modalOpen) {
+        closeModal();
+      }
+    };
+
+    if (modalOpen) {
+      document.addEventListener("keydown", handleEscape);
+      // Empêcher le scroll du body quand la modale est ouverte
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "auto";
+    };
+  }, [modalOpen, closeModal]);
 
   const modalVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -54,9 +74,13 @@ export default function Modal({ modalOpen, closeModal }: ModalProps) {
           initial="hidden"
           animate="visible"
           exit="exit"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          aria-describedby="modal-content"
         >
           <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-800">
-            <h2 className="text-xl font-bold">
+            <h2 id="modal-title" className="text-xl font-bold">
               {modalOpen === "about" && tAbout("title")}
               {modalOpen === "skills" && tSkills("title")}
               {modalOpen === "education" && tEducation("title")}
@@ -65,11 +89,12 @@ export default function Modal({ modalOpen, closeModal }: ModalProps) {
             <button 
               onClick={closeModal}
               className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Fermer la modale"
             >
               <X className="h-6 w-6" />
             </button>
           </div>
-          <div className="overflow-y-auto">
+          <div id="modal-content" className="overflow-y-auto">
             <ModalContent modalOpen={modalOpen} />
           </div>
         </motion.div>

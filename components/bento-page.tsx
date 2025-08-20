@@ -43,12 +43,10 @@ export default function BentoPage() {
 
   const openModal = (type: ModalType) => {
     setModalOpen(type);
-    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalOpen(null);
-    document.body.style.overflow = "auto";
   };
 
   return (
