@@ -3,16 +3,45 @@
 import confetti from 'canvas-confetti';
 
 interface ConfettiSuperProps {
-  type?: 'spiral' | 'rain';
   colors?: string[];
   duration?: number;
 }
 
-// Fonction qui crée une spirale de confettis
-const spiral = (colors?: string[]) => {
+// Fonction qui adapte les paramètres selon la taille d'écran
+const getResponsiveConfig = () => {
+  if (typeof window === 'undefined') return { particleCount: 6, radius: 0.3, scalar: 0.7 };
+  
+  const width = window.innerWidth;
+  
+  if (width < 640) { // Mobile
+    return {
+      particleCount: 4,
+      radius: 0.25,
+      scalar: 0.6,
+      ticks: 250
+    };
+  } else if (width < 1024) { // Tablet
+    return {
+      particleCount: 5,
+      radius: 0.28,
+      scalar: 0.65,
+      ticks: 275
+    };
+  } else { // Desktop
+    return {
+      particleCount: 6,
+      radius: 0.3,
+      scalar: 0.7,
+      ticks: 300
+    };
+  }
+};
+
+// Fonction qui crée une spirale de confettis avec transition fluide
+const spiral = (colors?: string[], duration = 5000) => {
   const defaultColors = colors || ['#9c27b0', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4'];
-  const duration = 5000;
   const animationEnd = Date.now() + duration;
+  const fadeOutDuration = 1000; // 1 seconde de fade out
   
   const frame = () => {
     const timeLeft = animationEnd - Date.now();
@@ -21,21 +50,30 @@ const spiral = (colors?: string[]) => {
       return;
     }
     
-    const particleCount = 6;
-    const radians = (timeLeft / duration) * Math.PI * 8;
+    const config = getResponsiveConfig();
+    const progress = 1 - (timeLeft / duration);
+    const radians = progress * Math.PI * 8;
+    
+    // Calculer l'intensité pour le fade out
+    let intensity = 1;
+    if (timeLeft < fadeOutDuration) {
+      intensity = timeLeft / fadeOutDuration;
+    }
+    
+    const adjustedParticleCount = Math.max(1, Math.floor(config.particleCount * intensity));
     
     confetti({
-      particleCount,
+      particleCount: adjustedParticleCount,
       startVelocity: 0,
-      ticks: 300,
+      ticks: config.ticks,
       origin: {
-        x: 0.5 + 0.3 * Math.cos(radians),
-        y: 0.5 + 0.3 * Math.sin(radians)
+        x: 0.5 + config.radius * Math.cos(radians),
+        y: 0.5 + config.radius * Math.sin(radians)
       },
       colors: defaultColors,
       shapes: ['circle', 'square'],
       gravity: 0.5,
-      scalar: 0.7,
+      scalar: config.scalar * intensity,
       drift: 0,
     });
     
@@ -45,63 +83,10 @@ const spiral = (colors?: string[]) => {
   frame();
 };
 
-// Fonction qui fait pleuvoir des confettis
-const rain = (colors?: string[]) => {
-  const defaultColors = colors || ['#76d7ea', '#a9eee6', '#56bae6', '#a6caf0', '#bfdbf7'];
-  const duration = 6000;
-  const end = Date.now() + duration;
-  
-  const makeItRain = () => {
-    if (Date.now() > end) {
-      return;
-    }
-    
-    confetti({
-      particleCount: 3,
-      angle: 140,
-      spread: 55,
-      origin: { x: Math.random(), y: -0.1 },
-      colors: defaultColors,
-      gravity: 2.5,
-      startVelocity: 15,
-      scalar: 0.9,
-      drift: 0,
-      ticks: 400,
-    });
-    
-    confetti({
-      particleCount: 3,
-      angle: 40,
-      spread: 55,
-      origin: { x: Math.random(), y: -0.1 },
-      colors: defaultColors,
-      gravity: 2.5,
-      startVelocity: 15,
-      scalar: 0.9,
-      drift: 0,
-      ticks: 400,
-    });
-    
-    requestAnimationFrame(makeItRain);
-  };
-  
-  makeItRain();
-};
-
-export const launchConfettiSuper = ({ type = 'spiral', colors, duration = 5000 }: ConfettiSuperProps = {}) => {
+export const launchConfettiSuper = ({ colors, duration = 5000 }: ConfettiSuperProps = {}) => {
   setTimeout(() => {
-    if (type === 'spiral') {
-      spiral(colors);
-    } else {
-      rain(colors);
-    }
+    spiral(colors, duration);
   }, 0);
-  
-  if (duration > 0) {
-    setTimeout(() => {
-      confetti.reset();
-    }, duration);
-  }
 };
 
 export default function AnimationConfettiSuper() {

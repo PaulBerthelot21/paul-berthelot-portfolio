@@ -4,6 +4,7 @@ import * as React from "react"
 import { PartyPopper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { launchConfettiSuper } from "@/components/animations/animation-confetti-super"
+import { useTranslations } from "next-intl"
 
 // Palette de couleurs dans le style du portfolio
 const portfolioColors = [
@@ -20,11 +21,9 @@ const portfolioColors = [
 ];
 
 export function ConfettiToggle() {
+    const t = useTranslations("Settings");
+
     const handleToggleConfetti = () => {
-        // Choisir aléatoirement entre spiral et rain
-        const animations = ['spiral', 'rain'] as const;
-        const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
-        
         // Sélectionner aléatoirement 4-6 couleurs de la palette
         const numberOfColors = Math.floor(Math.random() * 3) + 4; // 4 à 6 couleurs
         let selectedColors: string[] = [];
@@ -34,7 +33,6 @@ export function ConfettiToggle() {
         selectedColors = shuffledColors.slice(0, numberOfColors);
         
         launchConfettiSuper({
-            type: randomAnimation,
             colors: selectedColors,
         });
     }
@@ -46,7 +44,7 @@ export function ConfettiToggle() {
           onClick={handleToggleConfetti}
         >
           <PartyPopper className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Toggle confetti</span>
+          <span className="sr-only">{t("confetti")}</span>
         </Button>
     )
 }
