@@ -1,7 +1,7 @@
 ---
 title: Easy Fleet
 description: Application de gestion de flotte automobile pour entreprises
-technologies: ["NextJS", "NestJS", "MySQL"]
+technologies: ["Next.js", "NestJS", "MySQL", "Docker", "Tailwind CSS", "Jest", "Swagger"]
 imageColor: from-green-400 to-emerald-500
 order: 1
 ---
@@ -30,7 +30,7 @@ L'application Easy Fleet a été développée pour répondre aux besoins de gest
 
 ## Technologies utilisées
 
-- **Frontend** : NextJS pour une interface utilisateur réactive et dynamique
+- **Frontend** : Next.js pour une interface utilisateur réactive et dynamique
 - **Librairie de composants** : Tailwind CSS pour un design moderne et personnalisable, Shadcn pour des composants réutilisables
 - **Backend** : NestJS pour une architecture modulaire et évolutive
 - **Base de données** : MySQL pour le stockage des données

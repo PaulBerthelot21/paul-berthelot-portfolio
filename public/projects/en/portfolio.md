@@ -1,7 +1,7 @@
 ---
 title: "Personal Portfolio"
 description: "A modern portfolio developed with Next.js and Tailwind CSS"
-technologies: ["Next.js", "Tailwind CSS"]
+technologies: ["Next.js", "Tailwind CSS", "Framer Motion"]
 imageColor: from-blue-400 to-purple-500
 ---
 
